@@ -25,6 +25,10 @@ const Employee = sequelize.define('Employee', {
     gender: {
         type: DataTypes.STRING,
         allowNull: false
+    },
+    alamat: {
+        type: DataTypes.STRING,
+        allowNull: false
     }
 });
 
