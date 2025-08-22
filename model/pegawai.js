@@ -17,6 +17,10 @@ const Employee = sequelize.define('Employee', {
     salary: {
         type: DataTypes.BIGINT,
         allowNull: false
+    },
+    age: {
+        type: DataTypes.INTEGER,
+        allowNull: false
     }
 });
 
