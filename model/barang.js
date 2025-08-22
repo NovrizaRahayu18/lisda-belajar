@@ -17,6 +17,14 @@ const Barang  = sequelize.define('data_barang', {
     harga: {
         type: DataTypes.BIGINT,
         allowNull: false
+    },
+    kategori: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    deskripsi: {
+        type: DataTypes.TEXT,
+        allowNull: true
     }
 });
 
