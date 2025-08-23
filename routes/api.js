@@ -1,9 +1,9 @@
 import express from "express";
 import pegawaiController from "../controller/pegawaiController.js";
 import barangController from "../controller/barangController.js";
-
+import tiketController from "../controller/tiketController.js";
 const router = express.Router();
-
+          
 router.get("/data-pegawai", pegawaiController.getAll);
 router.get("/pegawai/:id", pegawaiController.getOne);
 router.post("/pegawai-create", pegawaiController.create);
@@ -15,5 +15,11 @@ router.get("/barang/:id", barangController.getOne);
 router.post("/create-barang", barangController.create);
 router.put("/update-barang/:id", barangController.update);
 router.delete("/delete-barang/:id", barangController.delete);
+
+router.get("/data-tiket", tiketController.getAll);
+router.get("/tiket-satu-data/:id", tiketController.getOne);
+router.post("/tiket-create", tiketController.create);
+router.put("/tiket-update/:id", tiketController.update);
+router.delete("/tiket-delete/:id", tiketController.delete);
 
 export default router;
