@@ -1,9 +1,10 @@
 import express from "express";
 import pegawaiController from "../controller/pegawaiController.js";
 import barangController from "../controller/barangController.js";
+import {getAll} from "../controller/pegawaiController.js";
 const router = express.Router();
 
-router.get("/pegawai", pegawaiController.getAll);
+router.get("/pegawai", getAll);
 router.get("/pegawai/:id", pegawaiController.getOne);
 router.post("/pegawai-create", pegawaiController.create);
 router.put("/pegawai/:id", pegawaiController.update);
